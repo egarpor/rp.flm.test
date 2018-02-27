@@ -305,32 +305,38 @@ if (!run.simulations) {
   ## Read results ##
   ##################
   
-  preprocess.results <- FALSE
+  preprocess.results <- TRUE
   if (preprocess.results) {
     
     load("A/simus.dep095.b1e4.m1e4_1.RData")
     nr <- nrow(results)
-    resA <- matrix(NA, nrow = nr * 500, ncol = ncol(results))
-    for (k in 1:500) {
-  
-      try({
-        load(paste("A/simus.dep095.b1e4.m1e4_", k, ".RData", sep = ""))
-        resA[(nr * (k - 1) + 1):(nr * k), ] <- t(apply(results, 1, unlist))
-      })
-      cat(k, "\n")
-  
+    resultsA <- matrix(nrow = nr * 50, ncol = ncol(results))
+    for (j in 1:10) {
+      
+      for (k in 1:50) {
+        
+        jk <- 50 * (j - 1) + k
+        try({
+          load(paste("A/simus.dep095.b1e4.m1e4_", jk, ".RData", sep = ""))
+          resultsA[(nr * (k - 1) + 1):(nr * k), ] <- 
+            t(apply(results, 1, unlist))
+        })
+        cat(jk, "\n")
+    
+      }
+      colnames(resultsA) <- colnames(results)
+      resultsA <- as.data.frame(resultsA)
+      save(list = "resultsA", file = paste("resA_", j, ".RData", sep = ""))
+    
     }
-    colnames(resA) <- colnames(results)
-    resA <- as.data.frame(resA)
-    save(list = "resA", file = "resA.RData")
-  
+    
     load("B/simus.dep095.flm.b1e4.m1e4_1.RData")
     nr <- nrow(results)
     resB <- matrix(nrow = nrow(results) * 250, ncol = ncol(results))
     for (k in 1:250) {
   
       load(paste("B/simus.dep095.flm.b1e4.m1e4_", k, ".RData", sep = ""))
-      resB[(nr * (k - 1) + 1):(nr * k), ]  <-  t(apply(results, 1, unlist))
+      resB[(nr * (k - 1) + 1):(nr * k), ] <- t(apply(results, 1, unlist))
       cat(k, "\n")
   
     }
@@ -526,7 +532,17 @@ if (!run.simulations) {
   if (type == "A") {
   
     # Read data
-    load("resA.RData")
+    load("resA_1.RData")
+    nr <- nrow(resultsA)
+    resA <- matrix(nrow = nrow(resultsA) * 10, ncol = ncol(resultsA))
+    for (k in 1:10) {
+      
+      load(paste("resA_", k, ".RData", sep = ""))
+      resA[(nr * (k - 1) + 1):(nr * k), ] <- t(apply(resultsA, 1, unlist))
+      cat(k, "\n")
+      
+    }
+    
     df <- resA
     
     # Powers
