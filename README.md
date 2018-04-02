@@ -213,7 +213,7 @@ rp.flm.test(X.fdata = temp, Y = wind.speed, beta0.fdata = zero, verbose = FALSE,
 Reproducibility of Cuesta-Albertos *et al.* (2017)
 --------------------------------------------------
 
-The directory [`/simulation`](https://github.com/egarpor/rp.flm.test/tree/master/simulation) contains the scripts used in the simulation study of the aforementioned paper, as well as their `.RData` outputs. Note that the size of `/simulation` is 916 Mb and those files are not downloaded when installing `rp.flm.test`.
+The directory [`/simulation`](https://github.com/egarpor/data-gofflm/tree/master/simulation) in the [data-gofflm](https://github.com/egarpor/data-gofflm) repository contains the scripts used in the simulation study of the aforementioned paper, as well as their `.RData` outputs. Those files are not downloaded when installing `rp.flm.test`.
 
 References
 ----------
