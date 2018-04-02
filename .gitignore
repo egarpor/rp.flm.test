@@ -2,3 +2,4 @@
 *.so
 /TODO
 .Rproj.user
+.DS_Store
