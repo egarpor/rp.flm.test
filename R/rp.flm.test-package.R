@@ -13,7 +13,6 @@
 #' @importFrom stats density rnorm
 #' @importFrom utils setTxtProgressBar txtProgressBar
 #' @useDynLib rp.flm.test, .registration = TRUE
-#' @references 
-#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2017). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. arXiv:1701.08363. \url{https://arxiv.org/abs/1701.08363}
+#' @references
+#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. \emph{Annals of Statistics}, 47(1):439-467. \url{https://doi.org/10.1214/18-AOS1693}
 NULL
-

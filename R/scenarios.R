@@ -2,7 +2,7 @@
 
 #' @title Functional regression models for simple and composite hypothesis
 #'
-#' @description Sampling from the functional linear models considered in the simulation study of Cuesta-Albertos et al. (2017).
+#' @description Sampling from the functional linear models considered in the simulation study of Cuesta-Albertos et al. (2019).
 #'
 #' @param n the sample size.
 #' @param t time locations for the functional data.
@@ -18,7 +18,7 @@
 #' }
 #' @details The samples are generated from the regression model
 #' \deqn{Y = \langle \mathcal{X}, \beta\rangle + \delta \Delta(\mathcal{X})+\varepsilon,}{Y = <X, \beta> + \delta \Delta(X)+\varepsilon,}
-#' where \eqn{\delta \Delta(\mathcal{X})}{\delta \Delta(X)} is computed by \code{\link{m.dev}}. The description of the scenarios is detailed in the supplementary material of Cuesta-Albertos et al. (2017).
+#' where \eqn{\delta \Delta(\mathcal{X})}{\delta \Delta(X)} is computed by \code{\link{m.dev}}. The description of the scenarios is detailed in the supplementary material of Cuesta-Albertos et al. (2019).
 #' @examples
 #' # Generate samples for all scenarios
 #' samp <- list()
@@ -32,7 +32,7 @@
 #' }
 #' @author Eduardo García-Portugués (\email{edgarcia@@est-econ.uc3m.es}).
 #' @references
-#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2017). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. arXiv:1701.08363. \url{https://arxiv.org/abs/1701.08363}
+#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. \emph{Annals of Statistics}, 47(1):439-467. \url{https://doi.org/10.1214/18-AOS1693}
 #' @export
 r.mod <- function(n, scenario, delta = 0, t = seq(0, 1, l = 201), R2 = 0.95,
                   composite = TRUE) {
@@ -162,14 +162,14 @@ r.mod <- function(n, scenario, delta = 0, t = seq(0, 1, l = 201), R2 = 0.95,
 
 #' @title Deviations from functional linearity
 #'
-#' @description Deviations from functional linearity considered in the simulation study of Cuesta-Albertos et al. (2017).
+#' @description Deviations from functional linearity considered in the simulation study of Cuesta-Albertos et al. (2019).
 #'
 #' @inheritParams rp.flm.test
 #' @param type kind of deviation, an index from \code{1} to \code{5}.
 #' @inheritParams r.mod
 #' @param eta functional parameter employed when \code{type = 4}.
 #' @return A vector of length \code{length(X.fdata)} containing \eqn{\delta \Delta(\mathcal{X})}{\delta \Delta(X)}.
-#' @details The description of the deviations is detailed in the supplementary material of Cuesta-Albertos et al. (2017).
+#' @details The description of the deviations is detailed in the supplementary material of Cuesta-Albertos et al. (2019).
 #' @examples
 #' dev <- list()
 #' k <- 1
@@ -183,7 +183,7 @@ r.mod <- function(n, scenario, delta = 0, t = seq(0, 1, l = 201), R2 = 0.95,
 #' }
 #' @author Eduardo García-Portugués (\email{edgarcia@@est-econ.uc3m.es}).
 #' @references
-#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2017). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. arXiv:1701.08363. \url{https://arxiv.org/abs/1701.08363}
+#' Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. \emph{Annals of Statistics}, 47(1):439-467. \url{https://doi.org/10.1214/18-AOS1693}
 #' @export
 m.dev <- function(X.fdata, type, delta, eta, composite = TRUE) {
 

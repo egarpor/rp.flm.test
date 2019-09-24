@@ -29,12 +29,12 @@ A list with the following elements:
 }
 }
 \description{
-Sampling from the functional linear models considered in the simulation study of Cuesta-Albertos et al. (2017).
+Sampling from the functional linear models considered in the simulation study of Cuesta-Albertos et al. (2019).
 }
 \details{
 The samples are generated from the regression model
 \deqn{Y = \langle \mathcal{X}, \beta\rangle + \delta \Delta(\mathcal{X})+\varepsilon,}{Y = <X, \beta> + \delta \Delta(X)+\varepsilon,}
-where \eqn{\delta \Delta(\mathcal{X})}{\delta \Delta(X)} is computed by \code{\link{m.dev}}. The description of the scenarios is detailed in the supplementary material of Cuesta-Albertos et al. (2017).
+where \eqn{\delta \Delta(\mathcal{X})}{\delta \Delta(X)} is computed by \code{\link{m.dev}}. The description of the scenarios is detailed in the supplementary material of Cuesta-Albertos et al. (2019).
 }
 \examples{
 # Generate samples for all scenarios
@@ -49,7 +49,7 @@ for (i in 1:9) {
 }
 }
 \references{
-Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2017). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. arXiv:1701.08363. \url{https://arxiv.org/abs/1701.08363}
+Cuesta-Albertos, J.A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. \emph{Annals of Statistics}, 47(1):439-467. \url{https://doi.org/10.1214/18-AOS1693}
 }
 \author{
 Eduardo García-Portugués (\email{edgarcia@est-econ.uc3m.es}).

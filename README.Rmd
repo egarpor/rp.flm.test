@@ -22,7 +22,7 @@ rp.flm.test
 
 ## Overview
 
-Software companion for the paper *Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes* (Cuesta-Albertos *et al.*, 2017). It implements the proposed tests and allows to replicate the empirical results presented.
+Software companion for the paper *Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes* (Cuesta-Albertos, García-Portugués, Febrero-Bande and González-Manteiga, 2019). It implements the proposed tests and allows to replicate the empirical results presented.
 
 ## Install
 
@@ -147,12 +147,12 @@ rp.flm.test(X.fdata = temp, Y = wind.speed, beta0.fdata = zero, verbose = FALSE,
             B = 1e4)
 ```
 
-## Reproducibility of Cuesta-Albertos *et al.* (2017)
+## Reproducibility of Cuesta-Albertos et al. (2019)
 
 The directory [`/simulation`](https://github.com/egarpor/data-gofflm/tree/master/simulation) in the [data-gofflm](https://github.com/egarpor/data-gofflm) repository contains the scripts used in the simulation study of the aforementioned paper, as well as their `.RData` outputs. Those files are not downloaded when installing `rp.flm.test`.
 
 ## References
 
-Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2017). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. *arXiv:1701.08363*. <https://arxiv.org/abs/1701.08363>
+Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. *Annals of Statistics*, 47(1):439-467. <https://doi.org/10.1214/18-AOS1693>
 
 Febrero-Bande, M. and Oviedo de la Fuente, M. (2012). Statistical Computing in Functional Data Analysis: The R Package fda.usc. *Journal of Statistical Software*, 51(4), 1-28. <http://www.jstatsoft.org/v51/i04/>
