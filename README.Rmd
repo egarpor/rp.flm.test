@@ -153,6 +153,6 @@ The directory [`/simulation`](https://github.com/egarpor/data-gofflm/tree/master
 
 ## References
 
-Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. *Annals of Statistics*, 47(1):439-467. <https://doi.org/10.1214/18-AOS1693>
+Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M. and González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. *Annals of Statistics*, 47(1):439-467. [doi:10.1214/18-AOS1693](https://doi.org/10.1214/18-AOS1693)
 
-Febrero-Bande, M. and Oviedo de la Fuente, M. (2012). Statistical Computing in Functional Data Analysis: The R Package fda.usc. *Journal of Statistical Software*, 51(4), 1-28. <http://www.jstatsoft.org/v51/i04/>
+Febrero-Bande, M. and Oviedo de la Fuente, M. (2012). Statistical Computing in Functional Data Analysis: The R Package fda.usc. *Journal of Statistical Software*, 51(4), 1-28. [doi:10.18637/jss.v051.i04](https://doi.org/10.18637/jss.v051.i04)

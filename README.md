@@ -1,13 +1,12 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-rp.flm.test
-===========
+
+# rp.flm.test
 
 [![Travis-CI Build
 Status](https://travis-ci.org/egarpor/rp.flm.test.svg?branch=master)](https://travis-ci.org/egarpor/rp.flm.test)
 [![License](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Overview
---------
+## Overview
 
 Software companion for the paper *Goodness-of-fit tests for the
 functional linear model based on randomly projected empirical processes*
@@ -15,8 +14,7 @@ functional linear model based on randomly projected empirical processes*
 2019). It implements the proposed tests and allows to replicate the
 empirical results presented.
 
-Install
--------
+## Install
 
 ``` r
 # install.packages("devtools")
@@ -29,8 +27,7 @@ Alternatively, see function `rp.flm.test` in the
 (Febrero-Bande and Oviedo de la Fuente, 2012) for versions above
 `1.3.1`.
 
-Usage
------
+## Usage
 
 ### Simulated data
 
@@ -73,7 +70,6 @@ lines(rp.test2$beta.est, col = 3)
 <img src="README/README-simulated-1.png" style="display: block; margin: auto;" />
 
 ``` r
-
 # Simple hypothesis: do not reject beta = beta0
 rp.flm.test(X.fdata = X, Y = Y1, beta0.fdata = beta0, 
             verbose = FALSE)$p.values.fdr
@@ -143,13 +139,13 @@ zero <- fdata(mdata = rep(0, length(x$argvals)), argvals = x$argvals,
               rangeval = x$rangeval)
 rp.flm.test(X.fdata = x, Y = y, beta0.fdata = zero, verbose = FALSE, B = 1e4)
 #> 
-#>  Random projection based test for the simple hypothesis in a
-#>  functional linear model
+#>  Random projection based test for the simple hypothesis in a functional
+#>  linear model
 #> 
 #> data:  Y = <X, b> + e
-#> Mean CvM = 22639.62, Mean KS = 266.02, p-value < 2.2e-16, p-value
-#> < 2.2e-16, p-value < 2.2e-16, p-value < 2.2e-16, p-value <
-#> 2.2e-16, p-value < 2.2e-16
+#> Mean CvM = 22639.62, Mean KS = 266.02, p-value < 2.2e-16, p-value <
+#> 2.2e-16, p-value < 2.2e-16, p-value < 2.2e-16, p-value < 2.2e-16,
+#> p-value < 2.2e-16
 
 # With derivatives
 rp.tecat.1 <- rp.flm.test(X.fdata = fdata.deriv(x, 1), Y = y, verbose = FALSE,
@@ -190,7 +186,6 @@ lines(aemet$temp[l], col = 3)
 <img src="README/README-aemet-1.png" style="display: block; margin: auto;" />
 
 ``` r
-
 # Data without outliers
 wind.speed <- wind.speed[-l]
 temp <- temp[-l]
@@ -210,8 +205,8 @@ zero <- fdata(mdata = rep(0, length(temp$argvals)), argvals = temp$argvals,
 rp.flm.test(X.fdata = temp, Y = wind.speed, beta0.fdata = zero, verbose = FALSE,
             B = 1e4)
 #> 
-#>  Random projection based test for the simple hypothesis in a
-#>  functional linear model
+#>  Random projection based test for the simple hypothesis in a functional
+#>  linear model
 #> 
 #> data:  Y = <X, b> + e
 #> Mean CvM = 274.204, Mean KS = 29.106, p-value < 2.2e-16, p-value <
@@ -219,8 +214,7 @@ rp.flm.test(X.fdata = temp, Y = wind.speed, beta0.fdata = zero, verbose = FALSE,
 #> p-value < 2.2e-16
 ```
 
-Reproducibility of Cuesta-Albertos et al. (2019)
-------------------------------------------------
+## Reproducibility of Cuesta-Albertos et al. (2019)
 
 The directory
 [`/simulation`](https://github.com/egarpor/data-gofflm/tree/master/simulation)
@@ -229,16 +223,15 @@ contains the scripts used in the simulation study of the aforementioned
 paper, as well as their `.RData` outputs. Those files are not downloaded
 when installing `rp.flm.test`.
 
-References
-----------
+## References
 
 Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M. and
 González-Manteiga, W. (2019). Goodness-of-fit tests for the functional
 linear model based on randomly projected empirical processes. *Annals of
 Statistics*, 47(1):439-467.
-<a href="https://doi.org/10.1214/18-AOS1693" class="uri">https://doi.org/10.1214/18-AOS1693</a>
+[doi:10.1214/18-AOS1693](https://doi.org/10.1214/18-AOS1693)
 
 Febrero-Bande, M. and Oviedo de la Fuente, M. (2012). Statistical
 Computing in Functional Data Analysis: The R Package fda.usc. *Journal
 of Statistical Software*, 51(4), 1-28.
-<a href="http://www.jstatsoft.org/v51/i04/" class="uri">http://www.jstatsoft.org/v51/i04/</a>
+[doi:10.18637/jss.v051.i04](https://doi.org/10.18637/jss.v051.i04)

@@ -249,7 +249,7 @@ m.dev <- function(X.fdata, type, delta, eta, composite = TRUE) {
 #' @param main whether to show a caption indicating the scenario or not.
 #' @return Nothing. The functions are called for producing diagnostic plots.
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Check scenarios and deviations
 #' set.seed(3257641)
 #' check.scenarios()

@@ -182,7 +182,7 @@ rp.flm.statistic <- function(proj.X, residuals, proj.X.ord = NULL, F.code = TRUE
 #'                rangeval = c(0,1))
 #' Y <- inprod.fdata(X, beta0) + rnorm(n, sd = 0.1)
 #'
-#' \dontrun{
+#' \donttest{
 #' # Test all cases
 #' rp.flm.test(X.fdata = X, Y = Y, est.method = "pc")
 #' rp.flm.test(X.fdata = X, Y = Y, est.method = "pls")
@@ -210,7 +210,7 @@ rp.flm.statistic <- function(proj.X, residuals, proj.X.ord = NULL, F.code = TRUE
 #' plot(density(Y), main = "Density of Y", xlab = "Y", ylab = "Density")
 #' rug(Y)
 #'
-#' \dontrun{
+#' \donttest{
 #' # Simple hypothesis: do not reject beta = beta0
 #' rp.flm.test(X.fdata = X, Y = Y, beta0.fdata = beta0)$p.values.fdr
 #' flm.test(X.fdata = X, Y = Y, beta0.fdata = beta0, B = 1e3, plot.it = FALSE)
@@ -220,7 +220,7 @@ rp.flm.statistic <- function(proj.X, residuals, proj.X.ord = NULL, F.code = TRUE
 #' flm.test(X.fdata = X, Y = Y, beta0.fdata = beta0^2, B = 1e3, plot.it = FALSE)
 #' }
 #' 
-#' \dontrun{
+#' \donttest{
 #' # Increasing n.proj
 #' rp.flm.test(X.fdata = X, Y = Y, n.proj = 3, verbose = FALSE)$p.values.fdr
 #' rp.flm.test(X.fdata = X, Y = Y, n.proj = 5, verbose = FALSE)$p.values.fdr
@@ -230,7 +230,7 @@ rp.flm.statistic <- function(proj.X, residuals, proj.X.ord = NULL, F.code = TRUE
 #' rp.flm.test(X.fdata = X, Y = Y, B = 5e3, verbose = FALSE)$p.values.fdr
 #' }
 #' 
-#' \dontrun{
+#' \donttest{
 #' # Tecator dataset
 #'
 #' # Load data
@@ -264,7 +264,7 @@ rp.flm.statistic <- function(proj.X, residuals, proj.X.ord = NULL, F.code = TRUE
 #' rp.tecat.2$p.values.fdr
 #' }
 #' 
-#' \dontrun{
+#' \donttest{
 #' # AEMET dataset
 #'
 #' # Load data

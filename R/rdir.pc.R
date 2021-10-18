@@ -27,7 +27,7 @@
 #' set.seed(34567)
 #' rdir.pc(n = 5, X.fdata = X.fdata, fdata2pc.obj = pc)$data[, 1:10]
 #' 
-#' \dontrun{
+#' \donttest{
 #' # Comparison for the variance type
 #' set.seed(456732)
 #' n.proj <- 100
